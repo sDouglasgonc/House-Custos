@@ -1,0 +1,5 @@
+.img{
+    min-height: 100vh;
+    background: linear-gradient(#ffffff36, #000000b3),
+      url(../imgs/bonitaimg.jpg) center/cover no-repeat;
+}

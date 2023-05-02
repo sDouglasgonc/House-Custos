@@ -1,0 +1,17 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.banner h1{
+display: flex;
+justify-content: center;
+
+}
+.banner p {
+    display: flex;
+    justify-content: center;
+    
+}
