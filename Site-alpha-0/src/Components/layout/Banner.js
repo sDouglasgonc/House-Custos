@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "../layout/Banner.module.css"
+import imagem from "../imgs/bonitaimg.jpg"
+
 function Banner(){
     return(
-        <div className={styles.banner}>
-            <div className={styles.header}>
+        <div className={styles.banner}>  
+           
         <h1>Projeto sem nome</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         Ducimus eligendi mollitia repellat delectus voluptates enim
          molestias placeat eveniet animi odit.</p>
         {/*botão com href*/}
-            </div>
+        <img src={imagem}/>
         </div>
     )
 }

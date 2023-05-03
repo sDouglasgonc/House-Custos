@@ -1,0 +1,9 @@
+.container{
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+.min-height{
+min-height: 0 auto;
+}

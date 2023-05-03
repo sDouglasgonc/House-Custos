@@ -1,16 +1,23 @@
 .banner{
-    display: flex;
+    position: relative;
+    display: grid;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: auto;
+    background: linear-gradient(#ffffff36, #000000b3);
+    background-repeat:  center/cover no-repeat;
+    
 }
 
 .banner h1{
+position: absolute;
 display: flex;
-justify-content: center;
+top: 5%;
+left: 35%;
 
 }
 .banner p {
+    position: absolute;
     display: flex;
     justify-content: center;
     
