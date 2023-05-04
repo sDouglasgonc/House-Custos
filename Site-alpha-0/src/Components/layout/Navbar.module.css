@@ -4,7 +4,7 @@ background-color: #f2f2f2;
 box-shadow: 0 5px 15px #00000038;
 height: 80px;
 padding: 10px;
-justify-content: space-between;
+
 }
 .ul{
    display: flex;

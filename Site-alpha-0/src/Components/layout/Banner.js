@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../layout/Banner.module.css"
-import imagem from "../imgs/bonitaimg.jpg"
+
 
 function Banner(){
     return(
@@ -11,7 +11,6 @@ function Banner(){
         Ducimus eligendi mollitia repellat delectus voluptates enim
          molestias placeat eveniet animi odit.</p>
         {/*botão com href*/}
-        <img src={imagem}/>
         </div>
     )
 }
