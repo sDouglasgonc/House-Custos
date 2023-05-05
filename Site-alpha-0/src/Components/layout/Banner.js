@@ -10,7 +10,7 @@ function Banner(){
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         Ducimus eligendi mollitia repellat delectus voluptates enim
          molestias placeat eveniet animi odit.</p>
-        {/*botão com href*/}
+        <button className={styles.btn}>Vamos Checar</button>
         </div>
     )
 }

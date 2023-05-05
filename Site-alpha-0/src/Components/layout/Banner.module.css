@@ -1,21 +1,57 @@
+
+:root{
+    --cor-bege-base: #e9c89f;
+    --cor-greybase1: #cecdc9;
+    --cor-bluebase1: #002a43;
+    --cor-bluebase2: #57c1eb;
+    --color-greybase2: #717c82;
+  }
+
 .banner{
-    position: relative;
     display: grid;
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-repeat:  center/cover no-repeat;
-    
+    place-items: center;
+    display: grid;
+    text-align: center;
 }
 
 .banner h1{
+margin-top: 50px;
 display: flex;
 justify-content: center;
-
+color: var(--cor-bluebase1);
 }
 .banner p {
-    
     display: flex;
-    justify-content: center;
+    color: var(--cor-bluebase1);
+    font-size: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 25rem;
+    margin-bottom: 1.25rem;
     
+}
+
+.btn {
+ padding: 5px 25px 5px;
+color:black;
+border: 2px solid var(--cor-bluebase1);
+border-radius: 3px;
+background: transparent;
+transition: all 0.3s linear;
+cursor: pointer;
+}
+.btn:hover{
+    background-color: #002a43;
+    color: #f2f2f2;
+    border-radius: 6px;
+}
+
+@media (min-width: 768px){
+    .banner p{
+        max-width: 40rem;
+       
+    }
 }
