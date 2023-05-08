@@ -1,0 +1,9 @@
+.homeimg{
+position: relative;
+display: flex;
+width: 204vh;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}

@@ -8,8 +8,8 @@ function NavBar(){
         <nav className={styles.navbar}>
         <img className={styles.logo} src={logo} alt="Em Desenvolvimento"></img>
     <ul className={styles.ul} >
-        <li className={styles.li}><Link>Home</Link> </li>
-        <li className={styles.li}><Link>Custos</Link> </li>
+        <li className={styles.li}><Link to={"/"}>Home</Link> </li>
+        <li className={styles.li}><Link to={"/custos"}>Custos</Link> </li>
         <li className={styles.li}><Link>Sobre</Link> </li>
 
     </ul>

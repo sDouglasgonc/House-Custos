@@ -11,6 +11,7 @@ function Banner(){
         Ducimus eligendi mollitia repellat delectus voluptates enim
          molestias placeat eveniet animi odit.</p>
         <button className={styles.btn}>Vamos Checar</button>
+         
         </div>
     )
 }

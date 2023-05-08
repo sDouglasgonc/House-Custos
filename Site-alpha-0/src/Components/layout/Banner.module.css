@@ -8,6 +8,7 @@
   }
 
 .banner{
+    position: relative;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -15,17 +16,28 @@
     place-items: center;
     display: grid;
     text-align: center;
+    top: 0;
+    left: 0;
+    
 }
+.begeimg{
+    margin: 0;
+    width: 204.5vh;
+    max-height: 600px;
+    }
 
 .banner h1{
-margin-top: 50px;
-display: flex;
-justify-content: center;
-color: var(--cor-bluebase1);
+    position: absolute;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    color: var(--cor-bluebase1);
 }
 .banner p {
+    position: absolute;
     display: flex;
     color: var(--cor-bluebase1);
+    top: 150px;
     font-size: 15px;
     padding: 10px;
     margin: 0 auto;
@@ -35,13 +47,14 @@ color: var(--cor-bluebase1);
 }
 
 .btn {
- padding: 5px 25px 5px;
-color:black;
-border: 2px solid var(--cor-bluebase1);
-border-radius: 3px;
-background: transparent;
-transition: all 0.3s linear;
-cursor: pointer;
+    position: absolute;
+    padding: 5px 25px 5px;
+    color:black;
+    border: 2px solid var(--cor-bluebase1);
+    border-radius: 3px;
+    background: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
 }
 .btn:hover{
     background-color: #002a43;
@@ -49,9 +62,14 @@ cursor: pointer;
     border-radius: 6px;
 }
 
+
 @media (min-width: 768px){
+    .begeimg{
+        
+    }
     .banner p{
-        max-width: 40rem;
+    max-width: 40rem;
        
     }
+
 }
