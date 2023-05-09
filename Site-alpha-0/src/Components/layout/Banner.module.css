@@ -8,46 +8,30 @@
   }
 
 .banner{
-    position: relative;
     display: grid;
     justify-content: center;
     align-items: center;
-    margin: auto;
+   margin-top: 30px;
     place-items: center;
-    display: grid;
     text-align: center;
-    top: 0;
-    left: 0;
-    
+
 }
-.begeimg{
-    margin: 0;
-    width: 204.5vh;
-    max-height: 600px;
-    }
 
 .banner h1{
-    position: absolute;
-    top: 70px;
     display: flex;
-    justify-content: center;
     color: var(--cor-bluebase1);
+    padding-bottom: -30px;
+    
 }
 .banner p {
-    position: absolute;
     display: flex;
     color: var(--cor-bluebase1);
-    top: 150px;
     font-size: 15px;
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 25rem;
-    margin-bottom: 1.25rem;
-    
 }
 
 .btn {
-    position: absolute;
+    justify-content: center;
+   align-items: center;
     padding: 5px 25px 5px;
     color:black;
     border: 2px solid var(--cor-bluebase1);
