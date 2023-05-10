@@ -11,7 +11,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-   margin-top: 30px;
+   margin-top: 40px;
     place-items: center;
     text-align: center;
 
@@ -20,13 +20,14 @@
 .banner h1{
     display: flex;
     color: var(--cor-bluebase1);
-    padding-bottom: -30px;
+    padding-bottom: 23px;
     
 }
 .banner p {
     display: flex;
     color: var(--cor-bluebase1);
     font-size: 15px;
+    padding-bottom: 23px;
 }
 
 .btn {

@@ -5,6 +5,13 @@
   --cor-bluebase2: #57c1eb;
   --color-greybase2: #717c82;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,4 +26,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Roboto',
     sans-serif;
+}
+
+@media (min-width: 768px) {
+  *{
+ 
+  }
+}
+@media (min-width: 1024px) {
+
 }

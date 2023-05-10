@@ -1,4 +1,11 @@
 .home_main{
-    height: 100vh;
+    height: 80vh;
+    
+}
+
+@media (min-width: 768px){
+
+}
+@media (min-width: 1024px) {
     
 }
