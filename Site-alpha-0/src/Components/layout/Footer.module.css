@@ -34,8 +34,28 @@ list-style: none;
     text-align: center;
 }
 
-@media (min-width:768px){
+
+@media screen and (max-width:480px){
     .footer{
-        
+     height: 120px;
+     width: 572px;
+     transition: all 0.3s linear;
+     
     }
-}
+    .copy_right {
+        display: flex;
+        text-align: center;
+    }
+    
+  }
+  
+  @media screen and (min-width: 480px ) and (max-width:768px) {
+    .footer{
+     width: 770px ;
+    height: 100px;
+   margin: 0 auto;
+    }
+    
+    
+  }
+  

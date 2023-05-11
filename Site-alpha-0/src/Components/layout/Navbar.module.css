@@ -18,7 +18,7 @@ justify-content: space-between;
    display: flex;
     align-items: center;
     list-style: none;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 .li{
 margin-right: 30px;
@@ -41,15 +41,27 @@ li a:hover{
   justify-content: center;
 }
 
-@media (max-width:768px){
+@media screen and (max-width:480px){
   .navbar{
-   width: 768px;
+   height: 120px;
+   width: 572px;
+   transition: all 0.3s linear;
   }
- 
+  .logo{
+  padding: 11px;
+  
+  }
+  li a {
+    font-size: 20px;
+    
+  }
 }
 
-@media (max-width:720px) {
+@media screen and (min-width: 480px ) and (max-width:768px) {
   .navbar{
-    height: 100px;
+   width: 770px ;
+  height: 100px;
   }
+  
+  
 }
