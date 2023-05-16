@@ -5,19 +5,26 @@
     --cor-bluebase2: #57c1eb;
     --color-greybase2: #717c82;
   }
-
+nav{
+background: white;
+padding: 1rem 1.5rem;
+}
 .navbar{
-display: flex;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
 background-color: var(--color-greybase2);
 box-shadow: 0 5px 15px #00000038;
-height: 90px;
-padding: 10px;
+display: flex;
+align-items: center;
 justify-content: space-between;
 }
-.ul{
+.links{
+  height: 0;
    display: flex;
     align-items: center;
-    list-style: none;
+   list-style-type: none;
     margin-right: 40px;
 }
 .li{
@@ -29,39 +36,23 @@ li a{
     color: var(--cor-bluebase2);
     text-decoration: none;
 }
+
 li a:hover{
     color: var(--cor-bege-base);
     transition: all 0.3s linear;
 }
 .logo{
-  padding: 15px;
-  margin-left: 30px;
+  padding: 20px;
+  max-width: 90px;
+  margin-left: 23px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-@media screen and (max-width:480px){
-  .navbar{
-   height: 120px;
-   width: 572px;
-   transition: all 0.3s linear;
-  }
+@media screen and (min-width:800px) {
   .logo{
-  padding: 11px;
-  
-  }
-  li a {
-    font-size: 20px;
     
   }
 }
 
-@media screen and (min-width: 480px ) and (max-width:768px) {
-  .navbar{
-   width: 770px ;
-  height: 100px;
-  }
-  
-  
-}

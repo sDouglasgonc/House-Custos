@@ -46,21 +46,3 @@
     color: #f2f2f2;
     border-radius: 6px;
 }
-
-
-@media screen and (max-width: 480px){
-    .banner{
-        position: grid;
-       justify-content: center;
-       padding: 0 0 0 8em;
-    }
-
-}
-
-@media screen and (max-width: 768px){
-    .banner{
-        position: grid;
-       
-    }
-
-}
