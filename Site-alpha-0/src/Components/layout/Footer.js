@@ -3,7 +3,8 @@ import styles from "./Footer.module.css"
 
 function Footer(){
     return(
-<footer className={styles.footer}>
+<footer>
+    <div className={styles.main_footer}>
     <ul className={styles.midias_list}>
         <li>
             Github
@@ -13,11 +14,12 @@ function Footer(){
         </li>
         <li>
             Linkedn
-        </li>
-        <p className={styles.copy_right}>
+        </li> 
+    </ul>
+    <p className={styles.copy_right}>
             <span>Nome do Projeto</span> &copy; 2023
          </p>
-    </ul>
+    </div>
 </footer>
     )
 }

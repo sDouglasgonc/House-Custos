@@ -4,6 +4,7 @@ import styles from "../layout/Banner.module.css"
 
 function Banner(){
     return(
+        <header>
         <div className={styles.banner}>  
            
         <h1>Projeto sem nome</h1>
@@ -13,6 +14,7 @@ function Banner(){
         <button className={styles.btn}>Vamos Checar</button>
          
         </div>
+        </header>
     )
 }
 export default Banner

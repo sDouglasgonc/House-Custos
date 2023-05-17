@@ -17,7 +17,7 @@ root.render(
       <Route path="/" element={<Home/>}/>
       <Route path='/custos' element={<Custos/>}/>
     </Routes>
-
+<Footer/>
     </BrowserRouter>
   </React.StrictMode>
 );

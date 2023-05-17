@@ -7,27 +7,27 @@
     --color-greybase2: #717c82;
   }
 
-.banner{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-   margin-top: 40px;
-    place-items: center;
-    text-align: center;
+  .header{
+min-height: 100vh;
+  }
 
+.banner{
+min-height: 60vh;
+display: grid;
+place-items: center;
+text-align: center;
 }
 
 .banner h1{
-    display: flex;
-    color: var(--cor-bluebase1);
-    padding-bottom: 23px;
-    
+   color: #002a43;
+   text-transform: uppercase;
+    margin-top: 200px; 
 }
 .banner p {
-    display: flex;
     color: var(--cor-bluebase1);
-    font-size: 15px;
-    padding-bottom: 23px;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
 }
 
 .btn {
