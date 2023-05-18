@@ -9,7 +9,7 @@
 
 footer{
   background-color: var(--color-greybase2);
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
 width: 100%;
 }
 .main_footer{
@@ -29,7 +29,8 @@ padding-right: 23px;
 }
 .copy_right{
   text-align: center;
-  
+  margin-right: 23px;
+  color: #57c1eb;
 }
 
 

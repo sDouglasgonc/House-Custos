@@ -7,12 +7,9 @@
   }
 nav{
 background: white;
-padding: 1rem 1.5rem;
+
 }
 .navbar{
-position: fixed;
-top: 0;
-left: 0;
 width: 100%;
 background-color: var(--color-greybase2);
 box-shadow: 0 5px 15px #00000038;
