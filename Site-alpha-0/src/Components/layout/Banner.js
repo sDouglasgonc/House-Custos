@@ -1,18 +1,16 @@
 import React from "react";
 import styles from "../layout/Banner.module.css"
-
-
+import {Link} from "react-router-dom"
 function Banner(){
+
+
     return(
         <header>
         <div className={styles.banner}>  
            
-        <h1>Projeto sem nome</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Ducimus eligendi mollitia repellat delectus voluptates enim
-         molestias placeat eveniet animi odit.</p>
-        <button className={styles.btn}>Vamos Checar</button>
-         
+        <h1>House Custos</h1>
+        <p>Um site onde contará com o custo da minha casa, ultilizando uma api e podendo fazer o calculo das despesas, podendo fazer assim uma administração mais concisa.</p>
+            <Link className={styles.btn} to="/custos">Vamos Checar</Link>
         </div>
         </header>
     )

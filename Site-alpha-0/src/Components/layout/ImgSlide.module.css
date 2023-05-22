@@ -1,12 +1,21 @@
+:root{
+    --cor-bege-base: #e9c89f;
+    --cor-greybase1: #cecdc9;
+    --cor-bluebase1: #002a43;
+    --cor-bluebase2: #57c1eb;
+    --color-greybase2: #717c82;
+  }
+
+
 .slide_container{
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto ;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+  padding: 0;
 }
 .inner{
     display: flex;
@@ -26,10 +35,19 @@
     cursor: grab;
     overflow: hidden;
 }
-.h1{
+.h2{
+   color: var(--cor-bluebase1);
     margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: -20px;
+    margin-bottom: -60px;
+    
+}
+.p {
+    color: var(--cor-bluebase1);
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    text-align: center;
 }

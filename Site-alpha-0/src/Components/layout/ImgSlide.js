@@ -12,37 +12,33 @@ const carrosel = useRef()
 const [width , setWidth] = useState(0)
 
 useEffect(()=>{
-console.log(carrosel.current?.scrollWidth, carrosel.current?.offsetWidth)
-setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth )
-},[])
 
-    return(<>
+setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth )},[])
 
-    <h1 className={styles.h1}>Paisagem Aleatória</h1>
+return(<>
 
-
-
-        <div className={styles.slide_container}>
-            
+<h2 className={styles.h2}>Imagens da casa</h2>
+<div className={styles.slide_container}>
+    
 <motion.div ref={carrosel} className={styles.carrosel} whileTap={{cursor: "grabbing"}}>
 <motion.div className={styles.inner}
 drag="x"
 dragConstraints={{right: 0, left:-width}}
 initial={{x: 100}}
 animate={{x: 0}}
-transition={{duration: 0.8}}
->
+transition={{duration: 0.8}}>
 
-    {images.map(image =>(
-        <motion.div className={styles.item} key={image}>
-    <img src={image} alt="imagem text"/>
-            </motion.div>
-    ))}
+{images.map(image =>(
+<motion.div className={styles.item} key={image}>
+<img src={image} alt="imagem text"/>
+
+</motion.div>
+))}
 
 </motion.div>
 </motion.div>
-        </div>
-        </>
-    )
+</div>
+    </>
+)
 }
 export default ImgSlide
