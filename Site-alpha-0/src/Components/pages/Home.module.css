@@ -1,5 +1,7 @@
 .home_main{
     height: 100%;
-    
+    background-image: url(../imgs/bonitaimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 

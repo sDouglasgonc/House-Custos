@@ -3,7 +3,7 @@
     --cor-greybase1: #cecdc9;
     --cor-bluebase1: #002a43;
     --cor-bluebase2: #57c1eb;
-    --color-greybase2: #717c82;
+    --color-black1: #222;
   }
 nav{
 background: white;
@@ -11,8 +11,8 @@ background: white;
 }
 .navbar{
 width: 100%;
-background-color: var(--color-greybase2);
-box-shadow: 0 5px 15px #00000038;
+background-color: var(--color-black1);
+
 display: flex;
 align-items: center;
 justify-content: space-between;
