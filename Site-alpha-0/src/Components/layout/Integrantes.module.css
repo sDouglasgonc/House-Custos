@@ -1,20 +1,27 @@
 .div{
-    background-color: #f2f2f2;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto ;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  padding: 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto ;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+padding: 0;
+background-color: aliceblue;
 }
-.circle{
-display: flex;
-  background-color: blueviolet;
-  height: 180px;
-  width: 180px;
-  border-radius: 100px;
-  
-  
+.div h2 {
+  display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+}
+.div h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.div p {
+  margin-bottom: 80px;
 }

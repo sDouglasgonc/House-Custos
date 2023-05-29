@@ -6,11 +6,15 @@ function Integrantes(){
     return(
 <>
 <AnimatePresence>
-<motion.div  className={styles.div}>
-<motion.circle className={styles.circle}>
-
-</motion.circle>
-</motion.div>
+<div  className={styles.div}>
+<motion.foto className={styles.foto}>
+</motion.foto>
+<h2>Nome da Pessoa</h2>
+<h3>Ocupação da pessoa</h3>
+<p>Resumo sobre a pessoa Resumo sobre a pessoa Resumo sobre a pessoa Resumo sobre a pessoa
+Resumo sobre a pessoa 
+</p>
+</div>
 </AnimatePresence>
 </>
 
