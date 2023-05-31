@@ -1,27 +1,35 @@
-.div{
+.review{
   width: 100%;
   max-width: 900px;
   margin: 0 auto ;
-  min-height: 80vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 padding: 0;
 background-color: aliceblue;
 }
-.div h2 {
-  display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 100px;
+.box{
+  position: relative;
+  display: grid;
+  text-align: center;
+  place-items: center;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
 }
-.div h3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.review h3{
+  margin-top: 5px;
+}
+.review p {
+  margin-top: 23px;
+  max-width: 40rem;
   margin: 0 auto;
-  margin-bottom: 100px;
+  padding: 0;
 }
-.div p {
-  margin-bottom: 80px;
+.ocupation{
+margin-bottom: 10px;
+}
+.profile{
+  max-width: 190px;
 }
