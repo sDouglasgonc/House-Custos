@@ -1,35 +1,42 @@
 .review{
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto ;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-padding: 0;
-background-color: aliceblue;
-}
-.box{
-  position: relative;
-  display: grid;
-  text-align: center;
-  place-items: center;
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-}
-.review h3{
-  margin-top: 5px;
-}
-.review p {
-  margin-top: 23px;
-  max-width: 40rem;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto ;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   padding: 0;
-}
-.ocupation{
-margin-bottom: 10px;
-}
-.profile{
-  max-width: 190px;
-}
+  background-color: aliceblue;
+  }
+  .box{
+    position: relative;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    background: teal;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 18px;
+  }
+  .next{
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+   bottom: 350px;
+    right: 40%;
+    
+  }
+  .prev{
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+   bottom: 350px;
+    right: 40%;
+  }
+   

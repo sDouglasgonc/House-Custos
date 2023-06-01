@@ -1,0 +1,17 @@
+
+h3{
+  margin-top: 5px;
+}
+p {
+  margin-top: 23px;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.ocupation{
+margin-bottom: 10px;
+}
+.profile{
+  max-width: 250px;
+}
