@@ -2,14 +2,46 @@ import React from "react";
 import Imagem from "../imgs/homemadulto.png"
 import styles from "./Box.module.css"
 
-function Box(){
+function Box () {
     return(
-        <>
-<img className={styles.profile} src={Imagem} alt="img"></img>
-<h3>José Denison</h3>
-<h3 className={styles.ocupation}>Estudante de Radiologia</h3>
-<p>integrante da casa, filho de Luciana e Genival e irmão de Douglas.</p>
-</>
+        
+<div className={styles.container}>
+
+     {/*começo do card */}
+
+<div className={styles.slider_Wraper}>
+<div className={styles.inner_carousel}>
+    
+    <div className={styles.card}>
+    <h3>DOUGLAS </h3>
+    <div className={styles.carder_header}>
+        <div className={styles.ocupation}>ocupação</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.esse accusamus officiis.</p>
+    </div>
+    </div>
+
+{/*final do card */}
+
+    <div className={styles.card}>
+    <h3>DOUGLAS </h3>
+    <div className={styles.carder_header}>
+        <div className={styles.ocupation}>ocupação</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.esse accusamus officiis.</p>
+    </div>
+    </div>
+
+    <div className={styles.card}>
+    <h3>DOUGLAS </h3>
+    <div className={styles.carder_header}>
+        <div className={styles.ocupation}>ocupação</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.esse accusamus officiis.</p>
+    </div>
+    </div>
+
+</div>
+</div>
+</div>
+
     )
 }
 export default Box

@@ -13,7 +13,8 @@ const [width , setWidth] = useState(0)
 
 useEffect(()=>{
 
-setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth )},[])
+setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth
+)},[])
 
 return(<>
 
