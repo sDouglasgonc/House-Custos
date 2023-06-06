@@ -32,7 +32,6 @@ transition={{duration: 0.8}}>
 {images.map(image =>(
 <motion.div className={styles.item} key={image}>
 <img src={image} alt="imagem text"/>
-
 </motion.div>
 ))}
 
