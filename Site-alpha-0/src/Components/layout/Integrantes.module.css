@@ -24,9 +24,9 @@
 
 .slider_wraper{
   width: 60%;
-  overflow: hidden;
   padding: 20px;
   display: flex;
+  justify-content: center;
 }
 .inner_crousel{
   display: inline-flex;
@@ -37,13 +37,17 @@
   backdrop-filter: blur(20px);
   padding: 30px 20px;
   pointer-events: none;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
 }
  .container p{
   color: #f2f2f2;
   max-width: 40rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   line-height: 1;
   margin-bottom: 2vw;
   position: relative;
@@ -64,4 +68,25 @@
   font-size: 20px;
   color: #fff;
   margin-bottom: 5px;
+}
+
+.next{
+  margin: 0 auto;
+  color: aqua;
+  size: 23px;
+  justify-content: center;
+  display: flex;
+  background-color: #f2f2f2;
+  width: 30px;
+  border-radius: 100px;
+}
+.prev{
+  margin: 0 auto;
+  color: aqua;
+  size: 23px;
+  justify-content: center;
+  display: flex;
+  background-color: #f2f2f2;
+  width: 30px;
+  border-radius: 100px;
 }
