@@ -1,17 +1,18 @@
 .container{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   height: 100vh;
-  flex-direction: column;
 }
-.headings{
-  width: 60%;
-  margin-bottom: 2vw;
-
+.slideshow{
+  background-color: #ff0000;
+  width: 40vw;
+  margin: auto;
+height: 500px;
+position: relative;
 }
- .container h1{
+img{
+  max-width: fit-content;
+}
+ .card h1{
   font-size: 3vw;
   text-align: center;
   padding: 0 20px;
@@ -19,18 +20,8 @@
   text-decoration: underline;
   text-decoration-color: orange ;
   text-underline-offset: .5vw;
-  
 }
 
-.slider_wraper{
-  width: 60%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-.inner_crousel{
-  display: inline-flex;
-}
 .card{
   background-color: #ff0000;
   width: 300px;
@@ -42,7 +33,7 @@
   align-items: center;
 
 }
- .container p{
+ .card p{
   color: #f2f2f2;
   max-width: 40rem;
   margin: 0 auto;
@@ -70,23 +61,34 @@
   margin-bottom: 5px;
 }
 
-.next{
-  margin: 0 auto;
-  color: aqua;
-  size: 23px;
-  justify-content: center;
-  display: flex;
-  background-color: #f2f2f2;
-  width: 30px;
-  border-radius: 100px;
+button{
+  padding: 16px;
+  font-size: 18px;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 32px;
+  background-color: #07ff83;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: white;
 }
-.prev{
-  margin: 0 auto;
-  color: aqua;
-  size: 23px;
+.prevButton{
+  position: absolute;
+  top: 45%;
+  left: 2px;
+}
+.nextButton{
+  position: absolute;
+  top: 45%;
+  right: 2px;
+}
+.slideshow img{
+  margin: auto;
+  align-items: center;
   justify-content: center;
-  display: flex;
-  background-color: #f2f2f2;
-  width: 30px;
-  border-radius: 100px;
+  
+  width: 300px;
+  border-radius: 50px;
+
 }
