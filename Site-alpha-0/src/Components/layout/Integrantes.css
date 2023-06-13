@@ -3,7 +3,7 @@
   height: 100vh;
 }
 .slideshow{
-  background-color: #ff0000;
+  background-color: none;
   width: 40vw;
   margin: auto;
 height: 500px;
@@ -23,7 +23,7 @@ img{
 }
 
 .card{
-  background-color: #ff0000;
+  background-color: none;
   width: 300px;
   backdrop-filter: blur(20px);
   padding: 30px 20px;
@@ -67,11 +67,11 @@ button{
   width: 64px;
   aspect-ratio: 1;
   border-radius: 32px;
-  background-color: #07ff83;
+  background-color: #ff7707;
   border: none;
   cursor: pointer;
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .prevButton{
   position: absolute;
@@ -89,6 +89,6 @@ button{
   justify-content: center;
   
   width: 300px;
-  border-radius: 50px;
+  border-radius: 200px;
 
 }

@@ -7,12 +7,11 @@ function Home(){
     return(<>
     
     <div className={style.home_main}>
-    <div className={style.img}>
+    
         <Banner/>
         <ImgSlide/>
         <Integrantes/>
         </div>
-    </div>
         </>
     )
 }

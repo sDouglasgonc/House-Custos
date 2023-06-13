@@ -1,56 +1,101 @@
-import React from "react"
-import image from "../imgs/boneco.jpg"
-import image2 from "../imgs/homemadulto.png"
+import React, { useState } from "react"
+import image from "../imgs/homemadulto.png"
+import image2 from "../imgs/painho.png"
+import image3 from "../imgs/mainha.png"
+import { motion} from "framer-motion"
 import "./Integrantes.css"
-function Integrantes(){
 
-    const cards = [ 
+const imagens = [image,image2,image3]
+
+const cards = [ 
+
     <div id="0" className="card">
-    <div className="card_img">
-   
-    </div>
+    <img src={imagens[0]} alt="adsa"/>
     <div className="card_header">
-    <div className="tittle">polenta</div>
-    <div className="sub_title">Ocupação</div>
+    <div className="title">Integrante 1</div>
+    <div className="sub_title">Ocupação 1</div>
         
-    <p>Resumo sobre a pessoa de acordo</p>
+    <p>Resumo sobre a pessoa de acordo as coisas 1</p>
         
     </div>
     </div>,
 
 <div id="1" className="card">
-<div className="card_imagem">
-</div>
+<img src={imagens[1]} alt="adsa"/>
 <div className="card_header">
-<div className="title">pimenta adasdsad</div>
-<div className="sub_title">Ocupação</div>
+<div className="title">Integrante 2</div>
+<div className="sub_title">Ocupação 2</div>
     
-<p>Resumo sobre a pessoa de acordo</p>
+<p>Resumo sobre a pessoa de acordo as coisas 2</p>
     
 </div>
 </div>,
 
 
   <div id="2"className="card">
-  <img src={image} alt="adsa"/>
+  <img src={imagens[2]} alt="adsa"/>
   <div className="card_header">
-  <div className="title">polenta</div>
-  <div className="sub_title">Ocupação</div>
+  <div className="title">Integrante 3</div>
+  <div className="sub_title">Ocupação 3</div>
       
-  <p>Resumo sobre a pessoa de acordo</p>
+  <p>Resumo sobre a pessoa de acordo as coisas 3</p>
       
   </div>
   </div>
+  ]
 
-    ]
-const imagens = [image]
+const variants ={
+    inital:{
+        x: 200,
+        opacity: 1
+    }, 
+    animate:{
+        x:0,
+        opacity: 0
+    },
+    exit:{
+        x:-200,
+        opacity: 1
+    }
+
+}
+
+
+function Integrantes(){
+
+const[index , setIndex] = useState(0)
+
+    function nextSlide(){
+if(index === cards.length - 1){
+setIndex(0)
+return
+}
+setIndex(index + 1)
+    }
+    function prevSlide(){
+        if(index === 0){
+setIndex(cards.length - 1)
+return
+        }
+setIndex(index - 1)
+    }
+
+
     return(
         <>
 <div className="container">
 <div className="slideshow">
- {cards[2]}
-<button className="prevButton">{"<"}</button>
-<button className="nextButton">{">"}</button>
+ <motion.div 
+ variants={variants}
+ animate="animate"
+ initial ="initial"
+ exit="exit"
+ key={cards[index]}
+ />
+{cards[index]}
+
+<button className="prevButton" onClick={prevSlide}>{"<"}</button>
+<button className="nextButton" onClick={nextSlide}>{">"}</button>
 
 </div>
 
