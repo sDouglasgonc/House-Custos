@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import image from "../imgs/homemadulto.png"
 import image2 from "../imgs/painho.png"
 import image3 from "../imgs/mainha.png"
-import { motion} from "framer-motion"
+import { AnimatePresence,motion} from "framer-motion"
+
 import "./Integrantes.css"
 
 const imagens = [image,image2,image3]
@@ -61,7 +62,7 @@ const variants ={
 }
 
 
-function Integrantes(){
+function Integrantes({isVisible}){
 
 const[index , setIndex] = useState(0)
 
@@ -83,24 +84,27 @@ setIndex(index - 1)
 
     return(
         <>
+     <AnimatePresence> 
 <div className="container">
 <div className="slideshow">
- <motion.div 
+    
+ <motion.div
+
  variants={variants}
  animate="animate"
  initial ="initial"
  exit="exit"
  key={cards[index]}
- />
-{cards[index]}
-
+ >
+ {cards[index]}
+</motion.div>
 <button className="prevButton" onClick={prevSlide}>{"<"}</button>
 <button className="nextButton" onClick={nextSlide}>{">"}</button>
 
 </div>
 
 </div>
-
+</AnimatePresence>  
         </>
     )
 }
