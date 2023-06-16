@@ -48,15 +48,15 @@ const cards = [
 const variants ={
     inital:{
         x: 200,
-        opacity: 1
+        opacity: 0
     }, 
     animate:{
         x:0,
-        opacity: 0
+        opacity: 1
     },
     exit:{
         x:-200,
-        opacity: 1
+        opacity: 0
     }
 
 }
@@ -89,12 +89,10 @@ setIndex(index - 1)
 <div className="slideshow">
     
  <motion.div
-
  variants={variants}
  animate="animate"
  initial ="initial"
  exit="exit"
- key={cards[index]}
  >
  {cards[index]}
 </motion.div>
