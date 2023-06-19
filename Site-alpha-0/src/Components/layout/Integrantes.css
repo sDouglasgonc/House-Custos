@@ -23,7 +23,7 @@ img{
 }
 
 .card{
-  background-color: #222;
+  background-color: none;
   width: 300px;
   backdrop-filter: blur(20px);
   padding: 30px 20px;
@@ -101,3 +101,17 @@ left: 25%;
 object-fit: cover;
 object-position: center;
 }
+.example-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
