@@ -1,109 +1,55 @@
-import React, { useState } from "react"
-import image from "../imgs/homemadulto.png"
+import Carousel from 'react-bootstrap/Carousel'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import image1 from "../imgs/homemadulto.png"
 import image2 from "../imgs/painho.png"
 import image3 from "../imgs/mainha.png"
-import { AnimatePresence,motion} from "framer-motion"
-
 import "./Integrantes.css"
+const imagens = [image1,image2,image3]
 
-const imagens = [image,image2,image3]
+function Slides() {
+  return (
 
-const cards = [ 
+    <Carousel >
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={imagens[0]}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={imagens[1]}
+          alt="Second slide"
+        />
 
-    <div id="0" className="card">
-    <img src={imagens[0]} alt="adsa"/>
-    <div className="card_header">
-    <div className="title">Integrante 1</div>
-    <div className="sub_title">Ocupação 1</div>
-        
-    <p>Resumo sobre a pessoa de acordo as coisas 1</p>
-        
-    </div>
-    </div>,
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="holder.js/800x400?text=Third slide&bg=20232a"
+          alt="Third slide"
+        />
 
-<div id="1" className="card">
-<img src={imagens[1]} alt="adsa"/>
-<div className="card_header">
-<div className="title">Integrante 2</div>
-<div className="sub_title">Ocupação 2</div>
-    
-<p>Resumo sobre a pessoa de acordo as coisas 2</p>
-    
-</div>
-</div>,
-
-
-  <div id="2"className="card">
-  <img src={imagens[2]} alt="adsa"/>
-  <div className="card_header">
-  <div className="title">Integrante 3</div>
-  <div className="sub_title">Ocupação 3</div>
-      
-  <p>Resumo sobre a pessoa de acordo as coisas 3</p>
-      
-  </div>
-  </div>
-  ]
-
-const variants ={
-    inital:{
-        x: 200,
-        opacity: 0
-    }, 
-    animate:{
-        x:0,
-        opacity: 1
-    },
-    exit:{
-        x:-200,
-        opacity: 0
-    }
-
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
 }
 
 
-function Integrantes({isVisible}){
-
-const[index , setIndex] = useState(0)
-
-    function nextSlide(){
-if(index === cards.length - 1){
-setIndex(0)
-return
-}
-setIndex(index + 1)
-    }
-    function prevSlide(){
-        if(index === 0){
-setIndex(cards.length - 1)
-return
-        }
-setIndex(index - 1)
-    }
-
-
-    return(
-        <>
-     <AnimatePresence> 
-<div className="container">
-<div className="slideshow">
-    
- <motion.div
- variants={variants}
- animate="animate"
- initial ="initial"
- exit="exit"
- >
- {cards[index]}
-</motion.div>
-<button className="prevButton" onClick={prevSlide}>{"<"}</button>
-<button className="nextButton" onClick={nextSlide}>{">"}</button>
-
-</div>
-
-</div>
-</AnimatePresence>  
-        </>
-    )
-}
-export default Integrantes
+export default Slides;
