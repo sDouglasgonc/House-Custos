@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../layout/Banner";
 import style from "./Home.module.css"
 import ImgSlide from "../layout/ImgSlide";
-import Slides from "../layout/Slides";
+import Integrantes from "../layout/Integrantes";
 function Home(){
     return(<>
     
@@ -10,7 +10,7 @@ function Home(){
     
         <Banner/>
         <ImgSlide/>
-        <Inrw/>
+        <Integrantes/>
         </div>
         </>
     )
