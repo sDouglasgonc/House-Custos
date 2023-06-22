@@ -9,12 +9,12 @@ const imagens = [image1,image2,image3]
 
 function Integrantes() {
 
-  const onChange = currentSlide => {
-    console.log(currentSlide);
-  };
+
 
   return (
-    <Carousel className='carrousel' afterChange={onChange}>
+    <>
+    <h2 id='h2'>Integrantes da Casa</h2>
+    <Carousel autoplay="true" className='carrousel' >
     <div className='content'>
       <img className='real_img' alt='imagem 1' src={imagens[0]}/>
       <h2>Integrante 1</h2>
@@ -38,6 +38,7 @@ function Integrantes() {
     </div>
     
   </Carousel>
+  </>
   );
 }
 

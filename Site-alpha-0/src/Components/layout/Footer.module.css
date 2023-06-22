@@ -1,11 +1,10 @@
-
 :root{
-    --cor-bege-base: #e9c89f;
-    --cor-greybase1: #cecdc9;
-    --cor-bluebase1: #002a43;
-    --cor-bluebase2: #57c1eb;
-    --color-greybase2: #717c82;
-  }
+  --cor-bege-base: #e9c89f;
+  --cor-orangebase: #d45a29;
+  --cor-bluebase1: #002a43;
+  --cor-bluebase2: #57c1eb;
+  --color-greybase2: #717c82;
+}
 
 footer{
   background-color: #222;
@@ -19,7 +18,7 @@ text-align: center;
 justify-content: space-between;
 }
 .midias_list{
-  color: #57c1eb;
+  color: var(--cor-orangebase);
   margin-bottom: 0;
   list-style-type: none;
   display: flex;
@@ -31,7 +30,7 @@ padding-right: 23px;
 .copy_right{
   text-align: center;
   margin-right: 23px;
-  color: #57c1eb;
+  color: var(--cor-orangebase);
 }
 
 
