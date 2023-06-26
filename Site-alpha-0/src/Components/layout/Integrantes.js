@@ -8,9 +8,6 @@ const imagens = [image1,image2,image3]
 
 
 function Integrantes() {
-
-
-
   return (
     <>
     <h2 id='h2'>Integrantes da Casa</h2>
