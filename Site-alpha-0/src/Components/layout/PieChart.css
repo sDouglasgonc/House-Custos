@@ -1,0 +1,7 @@
+.grafico_pie{
+    max-width: 200px;
+    min-height: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 4px solid black;
+}
