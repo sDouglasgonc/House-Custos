@@ -1,45 +1,31 @@
-import React from "react"
-import ApexChart from "react-apexcharts"
-import "./Charts.css"
+import React from "react";
+import {Chart} from "react-google-charts"
 
-function Charts(){
-    
-const options = {
+const data = [
+  ["Task", "Hours per Day"],
+  ["Work", 11],
+  ["Eat", 2],
+  ["Commute", 2],
+  ["Watch TV", 2],
+  ["Sleep", 7],
+]
 
-    options: {
-        chart: {
-          width: 380,
-          type: 'pie',
-        },
-        
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
-            }
-          }
-        }]
-      },
-}
-const label ={
-    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E']
-}
-const series = {
-series:[[23,23,12,12,32]]
-}
-    return(
-<div className="grafico">
-    <ApexChart
-    options={options}
-    series={series}
-    label={label}
-    type="Pie"
-    />
+  const options = {
+    title:"asdadadad",
+    is3D:true
+  }
+
+function PieChart(){
+  
+  return(
+    <div className="chart_pie">
+<Chart
+chartType="PieChart"
+options={options}
+data={data}
+width={300}
+height={300}/>
 </div>
-    )
+  )
 }
-export default Charts
+export default PieChart
