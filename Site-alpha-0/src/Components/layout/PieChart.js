@@ -1,6 +1,6 @@
 import React from "react";
 import {Chart} from "react-google-charts"
-
+import "./PieChart.css"
 const data = [
   ["Task", "Hours per Day"],
   ["Work", 11],
@@ -11,7 +11,7 @@ const data = [
 ]
 
   const options = {
-    title:"asdadadad",
+    title:"Resumo das contas",
     is3D:true
   }
 
@@ -24,7 +24,8 @@ chartType="PieChart"
 options={options}
 data={data}
 width={300}
-height={300}/>
+height={300}
+/>
 </div>
   )
 }
