@@ -1,10 +1,10 @@
 import React from "react"
-import styles from "./Custos.module.css"
+import "./Custos.css"
 import Chart from "../layout/Charts"
 import Pie from "../layout/PieChart"
 function Custos(){
     return(
-      <div className={styles.custos_main}>
+      <div className="custos_main">
   <Chart/>
   <Pie/>
   </div>

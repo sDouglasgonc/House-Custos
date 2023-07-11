@@ -1,9 +1,11 @@
 .chart_pie{
 margin-right: 70px;
-margin-top: -300px;
+margin-top: -260px;
+width: 330px;
+height: 330px;
+background-color: #e0e0e0;
 border-radius: 23px;
-
-background: #e0e0e0;
+background: #ffffff;
 box-shadow:  15px 15px 39px #5a5a5a,
              -15px -15px 39px #ffffff;
 }
