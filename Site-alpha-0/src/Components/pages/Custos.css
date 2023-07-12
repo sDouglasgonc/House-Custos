@@ -1,6 +1,7 @@
-.custos_main{
-   background-color: #f2f2f2;
-   height: 110vh;
+.container{
+   display: flex;
+   background-color: #999999;
+   height: 150vh;
    display: flex;
    align-items: center;
    justify-content: center;

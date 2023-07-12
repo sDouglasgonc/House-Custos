@@ -18,7 +18,7 @@ const data = ([
   ])
   
   const options = {
-    width: 900,
+    width: 800,
     height:360,
     chartArea:{width:"50%"},
       title:"Levantamento dos custos da casa",
@@ -36,7 +36,7 @@ function Charts(){
       <>
 <div className="grafico">
     <Chart
-    style={{marginTop:10,marginLeft:-50}}
+    style={{marginTop:10,marginLeft:10}}
     chartType="ColumnChart"
 data={data}
 options={options}
