@@ -21,8 +21,7 @@ const data = ([
     width: 800,
     height:360,
     chartArea:{width:"50%"},
-      title:"Levantamento dos custos da casa",
-      subtitle:"De acordo com os meses do ano",
+      title:"LEVANTAMENTO DOS CUSTOS DA CASA",
     legend:{position:"rigth"},
 
     isStacked:true,

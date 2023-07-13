@@ -1,3 +1,4 @@
+
 import React from "react";
 import {Chart} from "react-google-charts"
 import "./PieChart.css"
@@ -12,7 +13,7 @@ const data = [
 ]
 
   const options = {
-    title:"Resumo das contas",
+    title:"% DE VALOR DAS CONTAS",
     is3D:true
   }
 
@@ -21,7 +22,14 @@ function PieChart(){
   return(
     <div className="chart_pie">
 <Chart
-style={{marginTop:10,marginLeft:6}}
+style={{
+  alignItems:"center",
+  margin: 0,
+  justifyContent:"center",
+  alignContent:"center",
+  marginLeft:10,
+
+}}
 chartType="PieChart"
 options={options}
 data={data}

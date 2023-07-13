@@ -1,9 +1,31 @@
 .container{
+   width: 100%;
    display: flex;
    background-color: #999999;
    height: 150vh;
+   
+}
+.content_page{
+   padding-left: 20px;
+   margin-top: 40px;
    display: flex;
-   align-items: center;
-   justify-content: center;
-   justify-content: space-between;
+ flex-flow: row wrap;
+ justify-content: space-between;
+}
+.column-30{
+   margin-top: 7px;
+   width: 30%;
+   padding: 0px;
+}
+.column-70{
+   width: 70%;
+   padding-left: 10px;
+}
+.box{
+   
+   width: 20%;
+   height: 200px;
+  background-color: transparent;
+   margin: 0 auto;
+   border-radius: 23px;
 }

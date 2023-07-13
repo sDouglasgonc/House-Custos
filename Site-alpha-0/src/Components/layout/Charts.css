@@ -1,11 +1,9 @@
 .grafico{
-margin: 0 auto;
 align-content: center;
 justify-content: center;
 width: 850px;
 height: 380px;
 background-color:#adadad;
-margin-top: -400px;
 border-radius: 23px;
 background: #ffffff;
 box-shadow:  15px 15px 39px #535353,
