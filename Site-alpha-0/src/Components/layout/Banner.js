@@ -5,7 +5,7 @@ function Banner(){
 
 
     return(
-        <header>
+        <header> 
         <div className="banner">  
         <div className="img"> 
         <h1>House Custos</h1>

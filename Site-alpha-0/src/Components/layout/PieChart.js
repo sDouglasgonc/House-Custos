@@ -1,6 +1,6 @@
 
 import React from "react";
-import {Chart} from "react-google-charts"
+import { Chart } from "react-google-charts"
 import "./PieChart.css"
 const data = [
   ["Task", "Hours per Day"],
@@ -9,34 +9,34 @@ const data = [
   ["Gás", 2],
   ["Cartão", 2],
   ["Mercado", 7],
-  ["Previdencia Social",6]
+  ["Previdencia Social", 6]
 ]
 
-  const options = {
-    title:"% DE VALOR DAS CONTAS",
-    is3D:true
-  }
+const options = {
+  title: "% DE VALOR DAS CONTAS",
+  is3D: true
+}
 
-function PieChart(){
-  
-  return(
+function PieChart() {
+
+  return (
     <div className="chart_pie">
-<Chart
-style={{
-  alignItems:"center",
-  margin: 0,
-  justifyContent:"center",
-  alignContent:"center",
-  marginLeft:10,
+      <Chart
+        style={{
+          alignItems: "center",
+          margin: 0,
+          justifyContent: "center",
+          alignContent: "center",
+          marginLeft: 10,
 
-}}
-chartType="PieChart"
-options={options}
-data={data}
-width={300}
-height={300}
-/>
-</div>
+        }}
+        chartType="PieChart"
+        options={options}
+        data={data}
+        width={300}
+        height={300}
+      />
+    </div>
   )
 }
 export default PieChart
