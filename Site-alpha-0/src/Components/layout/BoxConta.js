@@ -1,27 +1,31 @@
-import React from "react";
-import "./BoxConta.css"
-import { InputNumber, Space, Button } from "antd"
 
-const onChange = function (value) {
-    console.log('changed', value)
-}
+import MainBox from "../box/MainBox";
+
 
 function BoxConta() {
+
+    {/* const [inputBox, setInputBox] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:5000/InputBox", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then((resp) => resp.json)
+            .then((data) => {
+                setInputBox(data)
+            })
+            .catch((err) => console.log(err))
+    }, [])
+*/}
+
+
     return (
-        <div className="box_conta">
-            <h3>Conta de Água</h3>
-            <Space>
-                <InputNumber
-                    defaultValue={400}
-                    max={400}
-                    formatter={(value) => `R$ ${value}`.replace(/\B(?=(\d{2})+,+(?!\d))/g, ',')}
-                    parser={(value) => value.replace(/\$\s?|(,*)/g, '')}
-                    onChange={onChange}
-                    size="middle"
-                />
-                <Button type="primary">Primary Button</Button>
-            </Space>
-        </div>
+        <MainBox id="id" name="name" input="input" />
     )
 }
+
+
+
 export default BoxConta;

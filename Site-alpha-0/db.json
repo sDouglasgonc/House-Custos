@@ -1,5 +1,35 @@
 {
   "Contas": [
     {   }
+  ],
+  "InputBox":[
+    {
+      "id": 1,
+      "name": "Conta de Água",
+      "input":""
+    },
+    {
+      "id": 2,
+      "name": "Conta de Energia",
+      "input":""
+    },
+    {
+      "id": 3,
+      "name": "Conta do Gás",
+      "input":""
+    },{
+      "id": 4,
+      "name": "Conta do Cartão",
+      "input":""
+    },{
+      "id": 5,
+      "name": "Conta do Mercado",
+      "input":""
+    },
+    {
+      "id": 6,
+      "name": "Conta da Previdência Social",
+      "input":""
+    }
   ]
 }
