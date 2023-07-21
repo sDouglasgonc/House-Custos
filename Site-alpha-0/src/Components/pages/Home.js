@@ -1,19 +1,19 @@
 import React from "react";
-import Banner from "../layout/Banner";
+import Banner from "../layout_Home/Banner";
 import "./Home.css"
-import ImgSlide from "../layout/ImgSlide";
-import Integrantes from "../layout/Integrantes";
-function Home(){
-    return(
+import ImgSlide from "../layout_Home/ImgSlide";
+import Integrantes from "../layout_Home/Integrantes";
+function Home() {
+    return (
 
 
-    <div className="home_main">
+        <div className="home_main">
 
-        <Banner/>
-        <ImgSlide/>
-        <Integrantes/>
+            <Banner />
+            <ImgSlide />
+            <Integrantes />
         </div>
-    
+
     )
 }
 export default Home
