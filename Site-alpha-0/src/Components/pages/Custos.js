@@ -14,11 +14,11 @@ function Custos() {
         <div className="column-30"><Pie /></div>
         <div className="column-100"><ProgressBar /></div>
         <div className="box"><BoxConta name={"Conta de Água"} /></div>
-        <div className="box"><BoxConta name={"Conta de Energia"} /></div>
+        { /*<div className="box"><BoxConta name={"Conta de Energia"} /></div>
         <div className="box"><BoxConta name={"Conta do Gás"} /></div>
         <div className="box"><BoxConta name={"Conta do Cartão"} /></div>
         <div className="box"><BoxConta name={"Conta do Mercado"} /></div>
-        <div className="box"><BoxConta name={"Conta da Previdência Social"} /></div>
+  <div className="box"><BoxConta name={"Conta da Previdência Social"} /></div>*/}
         <div className="bt"><ButtonMain /></div>
       </div>
     </div>

@@ -1,48 +1,36 @@
 import React from "react";
-import { InputNumber, Space, Button } from "antd"
 import "./BoxConta.css"
-import { useNavigate } from "react-router-dom";
-
-const onChange = function (value) {
-    console.log('changed', value)
-}
+import { useForm } from "react-hook-form";
 
 function BoxConta({ id, name }) {
 
-    const history = useNavigate()
+    const { register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm()
 
-    function createConta(conta) {
-        conta.value
 
-        fetch("http://localhost:5000/Contas", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(conta)
-        }).then((resp) => resp.json)
-            .then((data) => {
-                console.log(data)
-                //redirect
-            })
-            .catch((err) => console.log(err))
+
+    const onSubmit = (data) => {
+        console.log(data)
     }
-
 
     return (
         <div id={id} className="box_conta">
             <h3>{name}</h3>
-            <Space className="space">
-                <InputNumber
+            <div className="space">
+                <input
                     className="input"
-                    defaultValue={400}
-                    max={400}
-                    formatter={(value) => `R$ ${value}`.replace(/\B(?=(\d{2})+,+(?!\d))/g, ',')}
-                    parser={(value) => value.replace(/\$\s?|(,*)/g, '')}
-                    onChange={onChange}
+                    placeholder="Digite o valor"
+                    type="number"
+                    {...register("number", { required: true })}
                 />
-                <Button type="primary" handleSubmit={createConta}>Confirmar</Button>
-            </Space>
+                <button type="primary" onClick={() => handleSubmit(onSubmit)()} >Confirmar</button>
+            </div>
+            {errors?.name?.type === false &&
+                <p>preenchido</p>
+
+            }
         </div>
     )
 }
