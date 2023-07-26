@@ -1,40 +1,54 @@
-import React from "react";
-import "./BoxConta.css"
+import React, { useState } from "react";
+import "./BoxConta.css";
 import { useForm } from "react-hook-form";
 
 function BoxConta({ id, name }) {
-
-    const { register,
+    const {
+        register,
         handleSubmit,
-        formState: { errors }
-    } = useForm()
+        formState: { errors },
+        reset
+    } = useForm();
 
-
+    const [showMessage, setShowMessage] = useState(false);
 
     const onSubmit = (data) => {
-        console.log(data)
-    }
+        if (!data.number) {
+            setShowMessage(false);
+            return;
+        }
+
+        console.log(data);
+        setShowMessage(true);
+        reset();
+    };
 
     return (
         <div id={id} className="box_conta">
-            <h3>{name}</h3>
+            <h3 className="title">{name}</h3>
             <div className="space">
-                <input
-                    className="input"
-                    placeholder="Digite o valor"
-                    type="number"
-                    {...register("number", { required: true })}
-                />
-                <button type="primary" onClick={() => handleSubmit(onSubmit)()} >Confirmar</button>
+                {!showMessage && (
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input
+                            className="input"
+                            placeholder="Digite o valor"
+                            type="number"
+                            step="any"
+                            {...register("number", { required: "Campo obrigatório" })}
+                        />
+                        {errors.number && !showMessage && (
+                            <p className="error-message">{errors.number.message}</p>
+                        )}
+                        <button type="submit" className="btn_form">Confirmar</button>
+                    </form>
+                )}
+
+                {showMessage && !errors.number && (
+                    <p className="message">Preenchido!!</p>
+                )}
             </div>
-            {errors?.name?.type === false &&
-                <p>preenchido</p>
-
-            }
         </div>
-    )
+    );
 }
-
-
 
 export default BoxConta;
