@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./BoxConta.css";
 import { useForm } from "react-hook-form";
 
-function BoxConta({ id, name }) {
+function BoxConta({ id, name, updateProgress }) {
+
     const {
         register,
         handleSubmit,
@@ -21,6 +22,9 @@ function BoxConta({ id, name }) {
         console.log(data);
         setShowMessage(true);
         reset();
+
+        const filledPercentage = (data.number / 10) * 100;
+        updateProgress(filledPercentage)
     };
 
     return (
