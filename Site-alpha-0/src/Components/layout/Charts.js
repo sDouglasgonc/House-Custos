@@ -3,7 +3,7 @@ import "./Charts.css"
 
 const data = ([
   ["Meses do ano", "Água", "Energia", "Gás", "Cartão", "Mercado", "Previdencia Social", { role: 'anotation' }],
-  ["Janeiro", 300, 200, 200, 200, 232, 121, ''],
+  ["Janeiro", 300, 20.60, 200, 200, 232, 121, ''],
   ["Fevereiro", 200, 200, 200, 200, 232, 232, ''],
   ["Março", 260, 220, 300, 231, 232, 232, ''],
   ["Abril", 230, 240, 350, 300, 232, 232, ''],

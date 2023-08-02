@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./BoxConta.css";
 import { useForm } from "react-hook-form";
 
-function BoxConta({ id, name, updateProgress }) {
-
+function BoxConta({ id, name, onFill }) {
     const {
         register,
         handleSubmit,
@@ -22,9 +21,7 @@ function BoxConta({ id, name, updateProgress }) {
         console.log(data);
         setShowMessage(true);
         reset();
-
-        const filledPercentage = (data.number / 10) * 100;
-        updateProgress(filledPercentage)
+        onFill();
     };
 
     return (
@@ -43,7 +40,9 @@ function BoxConta({ id, name, updateProgress }) {
                         {errors.number && !showMessage && (
                             <p className="error-message">{errors.number.message}</p>
                         )}
-                        <button type="submit" className="btn_form">Confirmar</button>
+                        <button type="submit" className="btn_form">
+                            Confirmar
+                        </button>
                     </form>
                 )}
 
