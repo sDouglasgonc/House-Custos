@@ -1,35 +1,55 @@
 import { Chart } from "react-google-charts"
 import "./Charts.css"
-
-const data = ([
-  ["Meses do ano", "Água", "Energia", "Gás", "Cartão", "Mercado", "Previdencia Social", { role: 'anotation' }],
-  ["Janeiro", 300, 20.60, 200, 200, 232, 121, ''],
-  ["Fevereiro", 200, 200, 200, 200, 232, 232, ''],
-  ["Março", 260, 220, 300, 231, 232, 232, ''],
-  ["Abril", 230, 240, 350, 300, 232, 232, ''],
-  ["Maio", 200, 200, 200, 46, 350, 300, ''],
-  ["Jun", 270, 260, 250, 23, 350, 300, ''],
-  ["Jul", 260, 220, 200, 345, 350, 300, ''],
-  ["Ago", 80, 240, 250, 231, 350, 300, ''],
-  ["Set", 200, 200, 200, 45, 350, 300, ''],
-  ["Out", 270, 260, 250, 343, 350, 300, ''],
-  ["Nov", 210, 220, 200, 342, 350, 300, ''],
-  ["Dez", 80, 240, 250, 342, 350, 300, ''],
-])
+import { useState, useEffect } from "react"
 
 const options = {
   width: 800,
   height: 360,
   chartArea: { width: "50%" },
   title: "LEVANTAMENTO DOS CUSTOS DA CASA",
-  legend: { position: "rigth" },
+  legend: { position: "right" },
 
   isStacked: true,
 
 }
 
+function Charts({ filledValues }) {
 
-function Charts() {
+  const [chartData, setChartData] = useState([
+    ["Meses do ano", "Água", "Energia", "Gás", "Cartão", "Mercado", "Previdencia Social", { role: 'anotation' }],
+    ["Janeiro", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Fevereiro", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Março", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Abril", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Maio", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Jun", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Jul", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Ago", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Set", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Out", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Nov", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ["Dez", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+  ]);
+
+  useEffect(() => {
+    const newdata = [
+      ["Meses do ano", "Água", "Energia", "Gás", "Cartão", "Mercado", "Previdencia Social", { role: 'anotation' }],
+      ["Janeiro", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Fevereiro", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Março", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Abril", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Maio", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Jun", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Jul", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Ago", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Set", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Out", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Nov", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+      ["Dez", filledValues["1"] || 0, filledValues["2"] || 0, filledValues["3"] || 0, filledValues["4"] || 0, filledValues["5"] || 0, filledValues["6"] || 0, ''],
+    ]
+    setChartData(newdata)
+
+  }, [filledValues])
 
   return (
     <>
@@ -37,7 +57,7 @@ function Charts() {
         <Chart
           style={{ marginTop: 10, marginLeft: 10 }}
           chartType="ColumnChart"
-          data={data}
+          data={chartData}
           options={options}
 
           chartLanguage="pt-BR"

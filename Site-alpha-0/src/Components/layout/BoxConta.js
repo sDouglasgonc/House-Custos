@@ -21,7 +21,9 @@ function BoxConta({ id, name, onFill }) {
         console.log(data);
         setShowMessage(true);
         reset();
-        onFill();
+        if (onFill) {
+            onFill(data.number)
+        }
     };
 
     return (

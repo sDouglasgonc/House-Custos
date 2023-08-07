@@ -1,12 +1,15 @@
 import React from "react";
 import './ButtonMain.css'
-import { Button, Space } from "antd";
-function ButtonMain() {
+
+
+function ButtonMain({ onStartClick }) {
+
+
     return (
         <div className="button">
-            <Space >
-                <Button style={{ width: "300px", backgroundColor: "green", border: "none" }} >Começar</Button>
-            </Space>
+
+            <button className="btn_normal" onClick={onStartClick} >Começar</button>
+
         </div>
     )
 }
