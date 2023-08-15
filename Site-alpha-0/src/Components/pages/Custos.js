@@ -37,8 +37,31 @@ function Custos() {
       "5": filledValues["5"],
       "6": filledValues["6"],
     }
+
+    const jsonData = JSON.stringify(updateValues)
+
+    fetch("http://localhost:5000/Contas", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: jsonData
+    }, [])
+      .then(response => {
+        if (response.ok) {
+          console.log("Dados para a API enviados com sucesso")
+        }
+        else {
+          console.log("Erro ao enviar dados para a api")
+        }
+      })
+      .catch(error => {
+        console.error("Erro", error)
+      })
     setFilledValues(updateValues)
   }
+
+
   return (
     <div className="container">
       <div className="content_page">
@@ -72,7 +95,7 @@ function Custos() {
         </div>
 
         <div className="bt">
-          {Object.keys(filledValues).length === 6 && allboxesFilled === 6 && (<ButtonMain onStartClick={handleStartButtonClick} />)}
+          {Object.keys(filledValues).length === 6 && (<ButtonMain onStartClick={handleStartButtonClick} />)}
         </div>
 
       </div>
