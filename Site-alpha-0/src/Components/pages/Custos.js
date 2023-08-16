@@ -10,35 +10,36 @@ function Custos() {
   const [filledBoxes, setFilledBoxes] = useState(0);
   const [allboxesFilled, setAllBoxesFilled] = useState(false);
   const [filledValues, setFilledValues] = useState({})
-
+  const [filledAccounts, setFilledAccounts] = useState({})
   const updateProgress = () => {
     const totalPercentage = (filledBoxes / 3) * 50;
     return totalPercentage <= 100 ? totalPercentage : 100;
   };
 
-  const handleBoxFill = (id, value) => {
+  const handleBoxFill = (id, name, value) => {
     setFilledBoxes((prevFilledBoxes) => prevFilledBoxes + 1);
 
-    setFilledValues((prevFilledValues) => ({
-      ...prevFilledValues,
+
+    const updatedFilledValues = {
+      ...filledValues,
       [id]: value
-    }));
-    if (filledBoxes + 1 === 6) {
+    }
+    const updatedFilledAccounts = {
+      ...filledAccounts,
+      [id]: { nome: name, valor: value }
+    }
+
+    setFilledValues(updatedFilledValues)
+    setFilledAccounts(updatedFilledAccounts)
+
+    if (filledBoxes + 1 === 2) {
       setAllBoxesFilled(true)
     }
   };
 
   const handleStartButtonClick = () => {
-    const updateValues = {
-      "1": filledValues["1"],
-      "2": filledValues["2"],
-      "3": filledValues["3"],
-      "4": filledValues["4"],
-      "5": filledValues["5"],
-      "6": filledValues["6"],
-    }
 
-    const jsonData = JSON.stringify(updateValues)
+    const jsonData = JSON.stringify(filledAccounts)
 
     fetch("http://localhost:5000/Contas", {
       method: "POST",
@@ -47,20 +48,19 @@ function Custos() {
       },
       body: jsonData
     }, [])
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
-          console.log("Dados para a API enviados com sucesso")
-        }
-        else {
-          console.log("Erro ao enviar dados para a api")
+          console.log("Dados da API enviados com sucesso!!")
+        } else {
+          console.log("Erro ao enviar os dados!!")
         }
       })
-      .catch(error => {
-        console.error("Erro", error)
-      })
-    setFilledValues(updateValues)
-  }
 
+      .catch(error => {
+        console.error("Erro ao enviar os dados para a API", error)
+      })
+
+  }
 
   return (
     <div className="container">
@@ -81,7 +81,7 @@ function Custos() {
         <div className="box">
           <BoxConta id={"2"} name={"Conta de Energia"} onFill={(value) => handleBoxFill("2", value)} />
         </div>
-        <div className="box">
+        {/*<div className="box">
           <BoxConta id={"3"} name={"Conta de Gás"} onFill={(value) => handleBoxFill("3", value)} />
         </div>
         <div className="box">
@@ -92,10 +92,10 @@ function Custos() {
         </div>
         <div className="box">
           <BoxConta id={"6"} name={"Conta da Previdência Social"} onFill={(value) => handleBoxFill("6", value)} />
-        </div>
+  </div>*/}
 
         <div className="bt">
-          {Object.keys(filledValues).length === 6 && (<ButtonMain onStartClick={handleStartButtonClick} />)}
+          {allboxesFilled && (<ButtonMain onStartClick={handleStartButtonClick} />)}
         </div>
 
       </div>
