@@ -23,8 +23,7 @@ function BoxConta({ id, name, onFill }) {
         setShowMessage(true);
         reset();
         if (onFill) {
-            onFill(id, name, data.number
-            )
+            onFill(id, name, data.number)
         }
     };
 

@@ -6,11 +6,13 @@ import BoxConta from "../layout/BoxConta";
 import ProgressBar from "../layout/ProgressBar";
 import ButtonMain from "../layout/ButtonMain";
 
+
+
 function Custos() {
   const [filledBoxes, setFilledBoxes] = useState(0);
   const [allboxesFilled, setAllBoxesFilled] = useState(false);
-  const [filledValues, setFilledValues] = useState({})
-  const [filledAccounts, setFilledAccounts] = useState({})
+  const [submitData, setSubmitData] = useState([]);
+
   const updateProgress = () => {
     const totalPercentage = (filledBoxes / 3) * 50;
     return totalPercentage <= 100 ? totalPercentage : 100;
@@ -19,35 +21,28 @@ function Custos() {
   const handleBoxFill = (id, name, value) => {
     setFilledBoxes((prevFilledBoxes) => prevFilledBoxes + 1);
 
+    setSubmitData((prevSubmitData) => [
+      ...prevSubmitData,
+      { id, nome: name, valor: value }
+    ]);
 
-    const updatedFilledValues = {
-      ...filledValues,
-      [id]: value
-    }
-    const updatedFilledAccounts = {
-      ...filledAccounts,
-      [id]: { nome: name, valor: value }
-    }
-
-    setFilledValues(updatedFilledValues)
-    setFilledAccounts(updatedFilledAccounts)
 
     if (filledBoxes + 1 === 2) {
       setAllBoxesFilled(true)
+
     }
   };
 
   const handleStartButtonClick = () => {
-
-    const jsonData = JSON.stringify(filledAccounts)
+    const jsondata = JSON.stringify(submitData)
 
     fetch("http://localhost:5000/Contas", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
       },
-      body: jsonData
-    }, [])
+      body: jsondata
+    },)
       .then((response) => {
         if (response.ok) {
           console.log("Dados da API enviados com sucesso!!")
@@ -66,7 +61,7 @@ function Custos() {
     <div className="container">
       <div className="content_page">
         <div className="column-70">
-          <Chart filledValues={filledValues} />
+          <Chart />
         </div>
         <div className="column-30">
           <Pie />
@@ -76,10 +71,10 @@ function Custos() {
           <ProgressBar percent={updateProgress()} />
         </div>
         <div className="box">
-          <BoxConta id={"1"} name={"Conta de Água"} onFill={(value) => handleBoxFill("1", value)} />
+          <BoxConta id={"1"} name={"Conta de Água"} onFill={(value) => handleBoxFill("1", "Conta de Água", value)} />
         </div>
         <div className="box">
-          <BoxConta id={"2"} name={"Conta de Energia"} onFill={(value) => handleBoxFill("2", value)} />
+          <BoxConta id={"2"} name={"Conta de Energia"} onFill={(value) => handleBoxFill("2", "Conta de Energia", value)} />
         </div>
         {/*<div className="box">
           <BoxConta id={"3"} name={"Conta de Gás"} onFill={(value) => handleBoxFill("3", value)} />
