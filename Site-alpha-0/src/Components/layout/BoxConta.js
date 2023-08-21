@@ -1,56 +1,49 @@
 import React, { useState } from "react";
 import "./BoxConta.css";
-import { useForm } from "react-hook-form";
+
 
 function BoxConta({ id, name, onFill }) {
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset
-    } = useForm();
-
     const [showMessage, setShowMessage] = useState(false);
+    const [inputValue, setInputValue] = useState(""); // Estado para armazenar o valor do input
 
-    const onSubmit = (data) => {
-        if (!data.number) {
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
+    };
+
+    const onSubmit = (event) => {
+        event.preventDefault(); // Evitar envio de formulário padrão
+        if (!inputValue) {
             setShowMessage(false);
             return;
         }
 
-        console.log(data);
+        console.log(inputValue);
         setShowMessage(true);
-        reset();
         if (onFill) {
-            onFill(id, name, data.number)
+            onFill(inputValue);
         }
     };
+
 
     return (
         <div id={id} className="box_conta">
             <h3 className="title">{name}</h3>
             <div className="space">
                 {!showMessage && (
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={onSubmit}>
                         <input
                             className="input"
                             placeholder="Digite o valor"
                             type="number"
                             step="any"
-                            {...register("number", { required: "Campo obrigatório" })}
+                            onChange={handleInputChange}
+                            disabled={showMessage}
                         />
-                        {errors.number && !showMessage && (
-                            <p className="error-message">{errors.number.message}</p>
-                        )}
                         <button type="submit" className="btn_form">
                             Confirmar
                         </button>
                     </form>
-                )}
-
-                {showMessage && !errors.number && (
-                    <p className="message">Preenchido!!</p>
                 )}
             </div>
         </div>
