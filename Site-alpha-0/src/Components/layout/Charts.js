@@ -2,7 +2,7 @@ import { Chart } from "react-google-charts"
 import "./Charts.css"
 import { useEffect, useState } from "react"
 
-
+// aqui fica as opções do grafico de barras
 const options = {
   width: 800,
   height: 360,
@@ -15,21 +15,23 @@ const options = {
 }
 
 function Charts({ submitData, confirmPressed }) {
+  // aqui fica os valores iniciais do grafico de barras
   const [chartData, setChartData] = useState([
     ["Meses do ano", "Água", "Energia", "Gás", "Cartão", "Mercado", "Previdencia Social", { role: 'anotation' }],
-    ["Janeiro", 23, 32, 56, 43, 23, 12, ''],
-    ["Fevereiro", 23, 32, 56, 43, 23, 12, ''],
-    ["Março", 23, 32, 56, 43, 23, 12, ''],
-    ["Abril", 23, 32, 56, 43, 23, 12, ''],
-    ["Maio", 23, 32, 56, 43, 23, 12, ''],
-    ["Jun", 23, 32, 56, 43, 23, 12, ''],
-    ["Jul", 23, 32, 56, 43, 23, 12, ''],
-    ["Ago", 23, 32, 56, 43, 23, 12, ''],
-    ["Set", 23, 32, 56, 43, 23, 12, ''],
-    ["Out", 23, 32, 56, 43, 23, 12, ''],
-    ["Nov", 23, 32, 56, 43, 23, 12, ''],
-    ["Dez", 23, 32, 56, 43, 23, 12, ''],])
+    ["Janeiro", 0, 0, 0, 0, 0, 0, ''],
+    ["Fevereiro", 0, 0, 0, 0, 0, 0, ''],
+    ["Março", 0, 0, 0, 0, 0, 0, ''],
+    ["Abril", 0, 0, 0, 0, 0, 0, ''],
+    ["Maio", 0, 0, 0, 0, 0, 0, ''],
+    ["Jun", 0, 0, 0, 0, 0, 0, ''],
+    ["Jul", 0, 0, 0, 0, 0, 0, ''],
+    ["Ago", 0, 0, 0, 0, 0, 0, ''],
+    ["Set", 0, 0, 0, 0, 0, 0, ''],
+    ["Out", 0, 0, 0, 0, 0, 0, ''],
+    ["Nov", 0, 0, 0, 0, 0, 0, ''],
+    ["Dez", 0, 0, 0, 0, 0, 0, ''],])
 
+  // aqui é o useEffect que é usado para atribuir os novos valores ao grafico de acordo com o numero preenchido nas boxes
   useEffect(() => {
     if (confirmPressed) {
       const newChartSData = [
@@ -45,12 +47,14 @@ function Charts({ submitData, confirmPressed }) {
         ["Set", 0, 0, 0, 0, 0, 0, ''],
         ["Out", 0, 0, 0, 0, 0, 0, ''],
         ["Nov", 0, 0, 0, 0, 0, 0, ''],
-        ["Dez", 0, 0, 0, 0, 0, 0, ''],
+        ["Dez", 0, 0, 0, 0, 0, 0, '']
       ]
       setChartData(newChartSData)
+
     }
   }, [submitData, confirmPressed])
 
+  // aqui fica o gráfico em si 
   return (
     <>
       <div className="grafico">

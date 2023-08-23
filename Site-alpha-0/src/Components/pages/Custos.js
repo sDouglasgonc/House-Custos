@@ -1,3 +1,5 @@
+
+// todos os imports
 import React, { useState } from "react";
 import "./Custos.css";
 import Chart from "../layout/Charts";
@@ -9,29 +11,33 @@ import ButtonMain from "../layout/ButtonMain";
 
 
 function Custos() {
+
+  //todos os useStates //
   const [filledBoxes, setFilledBoxes] = useState(0);
   const [allboxesFilled, setAllBoxesFilled] = useState(false);
   const [submitData, setSubmitData] = useState([]);
   const [confirmPressed, setConfirmPressed] = useState(false)
 
+  // aqui fica o codigo referente a barra de progresso que vai aumentando de acordo com o preenchimento das boxes//
   const updateProgress = () => {
     const totalPercentage = (filledBoxes / 3) * 50;
     return totalPercentage <= 100 ? totalPercentage : 100;
   };
 
+  //aqui fica o codigo referente ao armazenamento dentro do json server 
   const handleBoxFill = (id, name, value) => {
     setFilledBoxes((prevFilledBoxes) => prevFilledBoxes + 1);
     setSubmitData((prevSubmitData) => [
       ...prevSubmitData,
       { id, nome: name, valor: value }
     ]);
-
+    //aqui é uma condicional para mostrar o botão quando as boxes forem preenchidas //
     if (filledBoxes + 1 === 6) {
       setAllBoxesFilled(true)
 
     }
   };
-
+  //esse é o codigo referente a requisição POST para o json server //
   const handleStartButtonClick = () => {
     const jsondata = JSON.stringify(submitData)
 
@@ -67,7 +73,7 @@ function Custos() {
     setConfirmPressed(true)
 
   }
-
+  // aqui fica as boxes e o botão que será mostrado se a condicional acima estiver correta
   return (
     <div className="container">
       <div className="content_page">
@@ -97,7 +103,7 @@ function Custos() {
           <BoxConta id={"5"} name={"Conta do Mercado"} onFill={(value) => handleBoxFill("5", "Conta do Mercado", value)} />
         </div>
         <div className="box">
-          <BoxConta id={"6"} name={"Conta do Mercado"} onFill={(value) => handleBoxFill("6", "Conta do Mercado", value)} />
+          <BoxConta id={"6"} name={"Conta da Previdencia Social"} onFill={(value) => handleBoxFill("6", "Conta da Previdencia Social", value)} />
         </div>
 
 
