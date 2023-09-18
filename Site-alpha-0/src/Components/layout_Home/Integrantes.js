@@ -22,13 +22,13 @@ function Integrantes() {
           <img className='real_img' alt='imagem2' src={imagens[1]} />
           <h2 >Integrante 2</h2>
           <h3 className='ocupation'>Ocupação</h3>
-          <p className='review'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div className='review'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
         </div>
         <div>
           <img className='real_img' alt='imagem3' src={imagens[2]} />
           <h2>Integrante 3</h2>
           <h3 className='ocupation'>Ocupação</h3>
-          <p className='review'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div className='review'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
           <p>
 
           </p>
