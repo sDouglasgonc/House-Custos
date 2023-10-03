@@ -64,7 +64,6 @@ function Custos() {
           console.log("Erro ao enviar os dados!!")
         }
       })
-
       .catch(error => {
         console.error("Erro ao enviar os dados para a API", error)
       })
