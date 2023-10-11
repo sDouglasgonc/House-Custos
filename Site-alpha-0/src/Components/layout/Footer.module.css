@@ -32,7 +32,9 @@ padding-right: 23px;
   margin-right: 23px;
   color: var(--cor-orangebase);
 }
-
+.copy_right span{
+font-size: 16px;
+}
 
 
 
