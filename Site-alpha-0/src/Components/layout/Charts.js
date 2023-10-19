@@ -4,14 +4,16 @@ import { useEffect, useState } from "react"
 
 // aqui fica as opções do grafico de barras
 const options = {
-  width: 420,
-  height: 380,
+  width: 385,
+  height: 280,
   chartArea: { width: "50%" },
   title: "LEVANTAMENTO DOS CUSTOS DA CASA",
   legend: { position: "right" },
   isStacked: true,
 
 }
+
+
 
 const options2 = {
   width: 420,
@@ -68,7 +70,7 @@ function Charts({ submitData, confirmPressed }) {
     <>
       <div className="grafico">
         <Chart
-          style={{ marginTop: 10, marginLeft: 10 }}
+          style={{ display: "flex", justifyContent: "center", alignContent: "center", marginTop: 5 }}
           chartType="ColumnChart"
           data={chartData}
           options={options}

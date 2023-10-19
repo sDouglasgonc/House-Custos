@@ -76,14 +76,14 @@ function Custos() {
   return (
     <div className="container">
       <div className="content_page">
-        <div className="column-70">
+        <div className="chart-bar">
           <Chart submitData={submitData} confirmPressed={confirmPressed} />
         </div>
-        <div className="column-30">
+        <div className="chart-pie">
           <Pie />
         </div>
 
-        <div className="column-100">
+        <div className="progress-bar">
           <ProgressBar percent={updateProgress()} />
         </div>
         <div className="box">
@@ -101,7 +101,7 @@ function Custos() {
         <div className="box">
           <BoxConta id={"5"} name={"Conta do Mercado"} onFill={(value) => handleBoxFill("5", "Conta do Mercado", value)} />
         </div>
-        <div className="box">
+        <div className="box nt">
           <BoxConta id={"6"} name={"Conta da Previdencia Social"} onFill={(value) => handleBoxFill("6", "Conta da Previdencia Social", value)} />
         </div>
 

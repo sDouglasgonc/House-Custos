@@ -1,3 +1,11 @@
 .bar{
     width: 600px;
+   
+}
+@media (max-width:480px) {
+.bar{
+    margin-top: 70px;
+    width: 400px;
+    
+}
 }

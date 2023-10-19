@@ -12,16 +12,16 @@
  flex-flow: row wrap;
  justify-content: space-between;
 }
-.column-30{
+.chart-pie{
    margin-top: 7px;
    width: 30%;
    padding: 0px;
 }
-.column-70{
+.chart-bar{
    width: 70%;
    padding-left: 10px;
 }
-.column-100{
+.progress-bar{
    width: 100%;
    align-items: center;
    margin: 0 auto;
@@ -44,4 +44,28 @@
    align-items: center;
    justify-content: center;
    margin: 0 auto;
+}
+
+@media (max-width:480px) {
+   .chart-bar{
+      width: 100%;
+   }
+   .container{
+      height: 100%;
+   }
+   .chart-pie{
+      width: 100%;
+   }
+   .progress-bar{
+      width: 100%;
+   }
+   .box{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -25px;
+      margin-bottom: 10px;
+   }
+   
 }

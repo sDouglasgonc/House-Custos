@@ -12,12 +12,15 @@ box-shadow:  15px 15px 39px #535353,
 
 @media (max-width:480px){
 .grafico{
+    width: 400px;
+    display: flex;
+    border-radius: 20px;
     border-radius: 0px;
-margin-left: -10px;
     align-content: center;
     justify-content: center;
-    width: 440px;
-    height: 400px;
+    height: 300px;
+    
+    border-radius: 23px;
 }
 
 }

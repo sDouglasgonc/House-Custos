@@ -48,9 +48,9 @@ li a:hover{
   align-items: center;
   justify-content: center;
 }
-@media screen and (min-width:800px) {
-  .logo{
-    
+@media (max-width:480px) {
+  .links{
+    font-size: medium;
   }
 }
 
