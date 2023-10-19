@@ -9,3 +9,15 @@ background: #ffffff;
 box-shadow:  15px 15px 39px #535353,
              -15px -15px 39px #b6b6b6;
 }
+
+@media (max-width:480px){
+.grafico{
+    border-radius: 0px;
+margin-left: -10px;
+    align-content: center;
+    justify-content: center;
+    width: 440px;
+    height: 400px;
+}
+
+}

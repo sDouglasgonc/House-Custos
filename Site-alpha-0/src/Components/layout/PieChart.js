@@ -13,11 +13,15 @@ const data = [
 ]
 
 const options = {
+  width: 300,
+  height: 300,
   title: "% DE VALOR DAS CONTAS",
   is3D: true
 }
 
 function PieChart() {
+
+
 
   return (
     <div className="chart_pie">
@@ -33,8 +37,7 @@ function PieChart() {
         chartType="PieChart"
         options={options}
         data={data}
-        width={300}
-        height={300}
+
       />
     </div>
   )

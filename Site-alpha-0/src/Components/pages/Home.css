@@ -3,5 +3,12 @@
     background-color: #000000;
 }
 
+@media (max-width: 480px){
+  .home_main{
+    height: 1900px;
+    background-color: #000000;
+flex-direction: column;
+  }
+}
 
 

@@ -4,14 +4,22 @@ import { useEffect, useState } from "react"
 
 // aqui fica as opções do grafico de barras
 const options = {
-  width: 800,
-  height: 360,
+  width: 420,
+  height: 380,
   chartArea: { width: "50%" },
   title: "LEVANTAMENTO DOS CUSTOS DA CASA",
   legend: { position: "right" },
-
   isStacked: true,
 
+}
+
+const options2 = {
+  width: 420,
+  height: 380,
+  chartArea: { width: "50%" },
+  title: "LEVANTAMENTO DOS CUSTOS DA CASA",
+  legend: { position: "right" },
+  isStacked: true,
 }
 
 function Charts({ submitData, confirmPressed }) {
@@ -54,6 +62,7 @@ function Charts({ submitData, confirmPressed }) {
     }
   }, [submitData, confirmPressed])
 
+
   // aqui fica o gráfico em si 
   return (
     <>
@@ -63,7 +72,6 @@ function Charts({ submitData, confirmPressed }) {
           chartType="ColumnChart"
           data={chartData}
           options={options}
-
           chartLanguage="pt-BR"
         />
       </div>
