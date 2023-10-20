@@ -46,26 +46,3 @@
    margin: 0 auto;
 }
 
-@media (max-width:480px) {
-   .chart-bar{
-      width: 100%;
-   }
-   .container{
-      height: 100%;
-   }
-   .chart-pie{
-      width: 100%;
-   }
-   .progress-bar{
-      width: 100%;
-   }
-   .box{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: -25px;
-      margin-bottom: 10px;
-   }
-   
-}

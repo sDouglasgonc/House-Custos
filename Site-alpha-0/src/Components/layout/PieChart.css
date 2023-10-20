@@ -19,3 +19,13 @@ box-shadow:  15px 15px 39px #5a5a5a,
     margin-bottom: 25px;
 }
 }
+
+@media (min-width: 481px) and (max-width:767px){
+    .chart_pie{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: -50px;
+        margin-left: 180px;
+    }
+}

@@ -2,6 +2,7 @@
 import React from "react";
 import { Chart } from "react-google-charts"
 import "./PieChart.css"
+import { useMediaQuery } from "react-responsive";
 const data = [
   ["Task", "Hours per Day"],
   ["Água", 11],
@@ -19,17 +20,26 @@ const options = {
   is3D: true
 }
 
-const options2 = {
-  width: 300,
+const options481x767 = {
+  width: 280,
   height: 300,
   title: "% DE VALOR DAS CONTAS",
   is3D: true
 }
 
+function Mobilefirst() {
+  const Esdevice = useMediaQuery({
+    query: "(min-width: 480px) and (max-width: 767px)"
+  })
+  if (Esdevice === true) {
+    return options481x767
+  } else {
+    return options
+  }
+}
+
+
 function PieChart() {
-
-
-
   return (
     <div className="chart_pie">
       <Chart
@@ -39,7 +49,7 @@ function PieChart() {
           alignContent: "center",
         }}
         chartType="PieChart"
-        options={options}
+        options={Mobilefirst()}
         data={data}
 
       />

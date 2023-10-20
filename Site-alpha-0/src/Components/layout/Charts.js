@@ -1,23 +1,22 @@
 import { Chart } from "react-google-charts"
 import "./Charts.css"
 import { useEffect, useState } from "react"
-
+import { useMediaQuery } from "react-responsive"
 // aqui fica as opções do grafico de barras
+
 const options = {
-  width: 385,
-  height: 280,
+
+  width: 400,
+  height: 360,
   chartArea: { width: "50%" },
   title: "LEVANTAMENTO DOS CUSTOS DA CASA",
   legend: { position: "right" },
   isStacked: true,
-
 }
 
-
-
-const options2 = {
-  width: 420,
-  height: 380,
+const options480 = {
+  width: 500,
+  height: 280,
   chartArea: { width: "50%" },
   title: "LEVANTAMENTO DOS CUSTOS DA CASA",
   legend: { position: "right" },
@@ -64,16 +63,27 @@ function Charts({ submitData, confirmPressed }) {
     }
   }, [submitData, confirmPressed])
 
+  function Mobilefirst() {
+    const mobile = useMediaQuery({
+      query: "screen and (max-width: 767px)"
+    })
+    if (mobile === true) {
+      return options480
+    } else {
+      return options
+    }
+  }
+  console.log(Mobilefirst())
 
   // aqui fica o gráfico em si 
   return (
     <>
       <div className="grafico">
         <Chart
-          style={{ display: "flex", justifyContent: "center", alignContent: "center", marginTop: 5 }}
+          style={{ width: "100%", display: "flex", justifyContent: "center", alignContent: "center", marginTop: 5 }}
           chartType="ColumnChart"
           data={chartData}
-          options={options}
+          options={Mobilefirst()}
           chartLanguage="pt-BR"
         />
       </div>
