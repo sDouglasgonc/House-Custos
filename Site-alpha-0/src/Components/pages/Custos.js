@@ -79,14 +79,14 @@ function Custos() {
         <div className="chart-bar">
           <Chart submitData={submitData} confirmPressed={confirmPressed} />
         </div>
-        {/* <div className="chart-pie">
+        <div className="chart-pie">
           <Pie />
-        </div> */}
+        </div>
 
-        {/* <div className="progress-bar">
+        <div className="progress-bar">
           <ProgressBar percent={updateProgress()} />
-        </div> */}
-        {/* <div className="box">
+        </div>
+        <div className="box">
           <BoxConta id={"1"} name={"Conta de Água"} onFill={(value) => handleBoxFill("1", "Conta de Água", value)} />
         </div>
         <div className="box">
@@ -101,9 +101,9 @@ function Custos() {
         <div className="box">
           <BoxConta id={"5"} name={"Conta do Mercado"} onFill={(value) => handleBoxFill("5", "Conta do Mercado", value)} />
         </div>
-        <div className="box nt">
+        <div className="box ">
           <BoxConta id={"6"} name={"Conta da Previdencia Social"} onFill={(value) => handleBoxFill("6", "Conta da Previdencia Social", value)} />
-        </div> */}
+        </div>
 
 
         <div className="bt">

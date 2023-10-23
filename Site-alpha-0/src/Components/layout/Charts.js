@@ -14,9 +14,9 @@ const options = {
   isStacked: true,
 }
 
-const options480 = {
-  width: 500,
-  height: 280,
+const MobileS = {
+  width: 200,
+  height: 200,
   chartArea: { width: "50%" },
   title: "LEVANTAMENTO DOS CUSTOS DA CASA",
   legend: { position: "right" },
@@ -64,11 +64,11 @@ function Charts({ submitData, confirmPressed }) {
   }, [submitData, confirmPressed])
 
   function Mobilefirst() {
-    const mobile = useMediaQuery({
-      query: "screen and (max-width: 767px)"
+    const smallScreen = useMediaQuery({
+      query: "screen and (max-width: 320px)"
     })
-    if (mobile === true) {
-      return options480
+    if (smallScreen === true) {
+      return MobileS
     } else {
       return options
     }

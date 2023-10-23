@@ -2,16 +2,13 @@
     width: 600px;
    
 }
-@media (max-width:480px) {
-.bar{
-    margin-top: 70px;
-    width: 400px;
-    
-}
-}
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media screen and (max-width: 320px) {
     .bar{
-        margin-top: -60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        width: 250px;
     }
 }

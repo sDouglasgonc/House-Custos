@@ -9,23 +9,15 @@ background: #ffffff;
 box-shadow:  15px 15px 39px #5a5a5a,
              -15px -15px 39px #b6b6b6;
 }
-@media (max-width:480px){
-.chart_pie{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-top: 15px;
-    margin-left: 30px;
-    margin-bottom: 25px;
-}
-}
 
-@media (min-width: 481px) and (max-width:767px){
+@media screen and (max-width:320px){
     .chart_pie{
         display: flex;
         justify-content: center;
         align-content: center;
-        margin-top: -50px;
-        margin-left: 180px;
+        width: 220px;
+        height: 210px;
+        margin-top: 26px;
+        margin-left: 20px;
     }
 }

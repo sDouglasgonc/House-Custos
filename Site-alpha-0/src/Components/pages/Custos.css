@@ -1,7 +1,7 @@
 .container{
    width: 100%;
    display: flex;
-   background-color: #999999;
+   background-color: #646464;
    height: 180vh;
    
 }
@@ -46,3 +46,24 @@
    margin: 0 auto;
 }
 
+@media screen and (max-width: 320px) {
+   .container{
+      width: 320px;
+      height: 100%;
+   }
+   .chart-bar{
+      width: 100%;
+   }
+   .box{
+      width: 100%;
+      scale: 0.8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -30px;
+   }
+   .bt{
+      margin-bottom: 20px;
+   }
+   
+}

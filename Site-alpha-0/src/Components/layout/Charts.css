@@ -10,5 +10,10 @@ box-shadow:  15px 15px 39px #535353,
              -15px -15px 39px #b6b6b6;
 }
 
-
+@media screen and (max-width: 320px){
+    .grafico{
+width: 250px;
+height: 220px;
+    }
+}
 

@@ -20,19 +20,19 @@ const options = {
   is3D: true
 }
 
-const options481x767 = {
-  width: 280,
-  height: 300,
+const MobileS = {
+  width: 200,
+  height: 200,
   title: "% DE VALOR DAS CONTAS",
   is3D: true
 }
 
 function Mobilefirst() {
-  const Esdevice = useMediaQuery({
-    query: "(min-width: 480px) and (max-width: 767px)"
+  const smallScreen = useMediaQuery({
+    query: "screen and (max-width: 320px)"
   })
-  if (Esdevice === true) {
-    return options481x767
+  if (smallScreen === true) {
+    return MobileS
   } else {
     return options
   }
@@ -44,6 +44,7 @@ function PieChart() {
     <div className="chart_pie">
       <Chart
         style={{
+          marginTop: 2,
           display: "flex",
           justifyContent: "center",
           alignContent: "center",

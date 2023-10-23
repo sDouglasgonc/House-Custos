@@ -8,13 +8,13 @@ function Footer() {
             <div className={styles.main_footer}>
                 <ul className={styles.midias_list}>
                     <li>
-                        <Link to={"https://github.com/sDouglasgonc"}> <GithubOutlined /> Github </Link>
+                        <GithubOutlined /> Github <Link to={"https://github.com/sDouglasgonc"}>  </Link>
                     </li>
                     <li>
-                        <Link to={"https://www.facebook.com/profile.php?id=100005975162268"}> <FacebookOutlined /> Facebook </Link>
+                        <FacebookOutlined /> Facebook  <Link to={"https://www.facebook.com/profile.php?id=100005975162268"}>  </Link>
                     </li>
                     <li>
-                        <Link to={"https://www.linkedin.com/in/douglas-silva-894065233/"}><LinkedinOutlined /> Linkedn </Link>
+                        <LinkedinOutlined /> Linkedn  <Link to={"https://www.linkedin.com/in/douglas-silva-894065233/"}> </Link>
                     </li>
                 </ul>
                 <p className={styles.copy_right}>
