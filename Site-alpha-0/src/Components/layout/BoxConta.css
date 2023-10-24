@@ -72,3 +72,8 @@
 @media (max-width:480px) {
     
 }
+@media  screen and (max-width: 375px) {
+    .box_conta{
+        margin-left: -40px;
+    }
+}

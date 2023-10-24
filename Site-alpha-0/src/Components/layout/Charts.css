@@ -14,6 +14,24 @@ box-shadow:  15px 15px 39px #535353,
     .grafico{
 width: 250px;
 height: 220px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+margin-left: -34px;
     }
 }
 
+@media screen and (max-width: 375px){
+    .grafico{
+width: 270px;
+height: 220px;
+margin-left: 25px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .grafico{
+        width: 355px;
+        height: 250px;
+    }
+}

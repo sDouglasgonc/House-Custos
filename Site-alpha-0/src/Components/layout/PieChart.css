@@ -16,8 +16,19 @@ box-shadow:  15px 15px 39px #5a5a5a,
         justify-content: center;
         align-content: center;
         width: 220px;
-        height: 210px;
+        height: 225px;
         margin-top: 26px;
         margin-left: 20px;
+    }
+}
+@media screen and (max-width:375px) {
+    .chart_pie{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 210px;
+       margin-top: 26px;
+       margin-left: 60px;
     }
 }

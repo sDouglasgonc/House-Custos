@@ -68,3 +68,15 @@ li a:hover{
     justify-content: space-between;
   }
 }
+@media screen and (max-width: 375px) {
+  .navbar{
+    width: 100%;
+  }
+ .links{
+  margin-left: 45px;
+ }
+ .li{
+  margin-left: -3px;
+ }
+ 
+}

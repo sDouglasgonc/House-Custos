@@ -5,7 +5,6 @@ import { useMediaQuery } from "react-responsive"
 // aqui fica as opções do grafico de barras
 
 const options = {
-
   width: 400,
   height: 360,
   chartArea: { width: "50%" },
@@ -16,6 +15,23 @@ const options = {
 
 const MobileS = {
   width: 200,
+  height: 200,
+  chartArea: { width: "50%" },
+  title: "LEVANTAMENTO DOS CUSTOS DA CASA",
+  legend: { position: "right" },
+  isStacked: true,
+}
+
+const MobileM = {
+  width: 250,
+  height: 200,
+  chartArea: { width: "50%" },
+  title: "LEVANTAMENTO DOS CUSTOS DA CASA",
+  legend: { position: "right" },
+  isStacked: true,
+}
+const MobileLar = {
+  width: 340,
   height: 200,
   chartArea: { width: "50%" },
   title: "LEVANTAMENTO DOS CUSTOS DA CASA",
@@ -67,8 +83,19 @@ function Charts({ submitData, confirmPressed }) {
     const smallScreen = useMediaQuery({
       query: "screen and (max-width: 320px)"
     })
+    const middleScreen = useMediaQuery({
+      query: " screen and (max-width:375px)"
+    })
+    const LargeScreen = useMediaQuery({
+      query: " screen and (max-width:425px)"
+    })
+
     if (smallScreen === true) {
       return MobileS
+    } if (middleScreen === true) {
+      return MobileM
+    } if (LargeScreen === true) {
+      return MobileLar
     } else {
       return options
     }
